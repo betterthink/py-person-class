@@ -8,7 +8,8 @@ class Person:
 
 
 def create_person_list(people: list) -> list:
-    person_instances = {human["name"]: Person(human["name"], human["age"]) for human in people}
+    person_instances = {human["name"]: Person(human["name"], human["age"])
+                        for human in people}
     for human in people:
         person = person_instances[human["name"]]
         if human.get("wife") is not None:
